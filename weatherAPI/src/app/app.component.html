@@ -1,0 +1,21 @@
+<p>{{ title }}</p>
+
+<table class="tg">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Temperature</td>
+            <td>Icon</td>
+            <td>Detailed Forecast</td>
+        </tr>
+    </thead>
+
+    <tbody *ngIf="periods.length > 0">
+        <tr *ngFor="let period of periods; index as i" >
+           <td>    {{ period.name }}</td>
+           <td>    {{ period.temperature }}</td>
+           <td>    {{ period.icon }}</td>
+           <td>    {{ period.detailedForecast }}</td>
+        </tr>
+    </tbody>
+</table>
